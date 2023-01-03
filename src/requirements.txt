@@ -1,0 +1,12 @@
+pandas
+fastapi
+pydantic
+uvicorn
+pymongo
+python-binance
+SQLAlchemy
+websockets
+matplotlib
+mplfinance
+tensorflow
+scikit-learn

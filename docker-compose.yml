@@ -1,0 +1,29 @@
+#version : "1.0.0"
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+  binance_api:
+    build: ./src
+    container_name: binance_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src/app:/home/project/
+  streamer:
+    build: ./src/streamer
+    container_name: streamer
+    volumes:
+      - ./src/streamer:/home/project/streamer
+    depends_on:
+      - "mongodb"
+networks:
+  default:
+    name: binance_opa_network
+    ipam:
+        driver: default
+        config:
+            - subnet: "172.24.0.0/16"
+              gateway: 172.24.0.1
