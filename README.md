@@ -4,6 +4,8 @@ Application de prédiction des prix des crypto-monnaies grâce aux algorithmes d
 Ce projet est entièrement dockeurisé et comporte une API.
 
 Installation : 
-- télécharger le repo
-- cd Binance-OPA
-- ./setup.sh
+1. Télécharger le repo
+2. Dossier du projet
+> cd Binance-OPA
+3. Lancer l'installation (le deamon Docker doit être actif pour cette commande)
+> ./setup.sh
